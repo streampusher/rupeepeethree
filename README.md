@@ -38,7 +38,7 @@ and generate the RDoc.
 
 (The MIT License)
 
-Copyright (c) 2013 FIX
+Copyright (c) 2013
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
