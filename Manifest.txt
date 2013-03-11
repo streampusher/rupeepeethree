@@ -1,0 +1,13 @@
+Gemfile
+Gemfile.lock
+History.txt
+Manifest.txt
+README.md
+Rakefile
+bin/rupeepeethree
+lib/rupeepeethree.rb
+lib/rupeepeethree/version.rb
+lib/rupeepeethree/tagger.rb
+spec/rupeepeethree_spec.rb
+spec/fixtures/cover_art.jpg
+spec/fixtures/test.mp3
