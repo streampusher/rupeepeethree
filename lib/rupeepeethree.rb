@@ -31,6 +31,6 @@ You thought your mp3s were cool. Turns out you were wrong. Your mp3s have no tag
       abort("no mp3 specified...")
     end
     Tagger.tag(mp3,opts)
-    Tagger.print_tags(mp3)
+    puts Tagger.print_tags(mp3)
   end
 end

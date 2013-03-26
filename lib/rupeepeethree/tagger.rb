@@ -36,25 +36,24 @@ class Tagger
   # clear all tags
   def self.clear(mp3)
     TagLib::MPEG::File.open(mp3) do |f|
-      tag = f.id3v2_tag
-      if tag
-        tag.remove_frames('TPE1')
-      end
-      f.save
+      f.strip
     end
   end
 
   def self.print_tags(mp3)
+    result = ""
     TagLib::MPEG::File.open(mp3) do |f|
       t = f.id3v2_tag
 
-      puts "title: #{t.title}"
-      puts "artist: #{t.artist}"
-      puts "album: #{t.album}"
-      puts "year: #{t.year}"
+      result << "title: #{t.title}\n"
+      result << "artist: #{t.artist}\n"
+      result << "album: #{t.album}\n"
+      result << "year: #{t.year}\n"
 
-      cover = t.frame_list('APIC').first
-      puts "image: [#{cover.mime_type}] [#{cover.picture.length} bytes]"
+      t.frame_list('APIC').each do |cover|
+        result << "image: [#{cover.mime_type}] [#{cover.picture.length} bytes]\n"
+      end
     end
+    return result
   end
 end
