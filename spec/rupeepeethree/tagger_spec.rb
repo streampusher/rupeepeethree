@@ -5,7 +5,17 @@ describe Tagger do
   before :each do
     Tagger.clear(mp3)
   end
-  it "creates a new apic frame if none exist"
+  it "edits the existing cover art frame instead of creating a new one" do
+    tags = {picture: "spec/fixtures/cover_art.jpg"}
+    image_string = /image: \[\[image\/jpeg\]\] \[59562 bytes\]\n/
+    Tagger.tag(mp3, tags)
+    result = Tagger.print_tags(mp3)
+    result.should match(image_string)
+
+    Tagger.tag(mp3, tags)
+    result = Tagger.print_tags(mp3)
+    result.should_not match(/#{image_string}{2}/)
+  end
   it "clears the tags"  do
     tags = {title: "foodfight",
             artist: "ninjaturtle",

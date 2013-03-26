@@ -19,20 +19,16 @@ class Tagger
       end
       if tags[:picture]
         image_file = File.expand_path(tags[:picture])
-        # replace first picture frame, don't add a new one
-        if !t.frame_list('APIC').first
-          cover = TagLib::ID3v2::AttachedPictureFrame.new
-          cover.mime_type = mime_type(image_file)
-          cover.type = TagLib::ID3v2::AttachedPictureFrame::FrontCover
-          cover.picture = File.open(image_file,"rb"){|f|f.read}
-          t.add_frame(cover)
-        else
-          cover = t.frame_list('APIC').first
-          cover.mime_type = mime_type(image_file)
-          cover.type = TagLib::ID3v2::AttachedPictureFrame::FrontCover
-          cover.picture = File.open(image_file,"rb"){|f|f.read}
-          t.add_frame(cover)
+        # delete old frame if it exists
+        cover = t.frame_list('APIC').first
+        if cover
+          t.remove_frame(cover)
         end
+        cover = TagLib::ID3v2::AttachedPictureFrame.new
+        cover.mime_type = mime_type(image_file)
+        cover.type = TagLib::ID3v2::AttachedPictureFrame::FrontCover
+        cover.picture = File.open(image_file,"rb"){|f|f.read}
+        t.add_frame(cover)
       end
       f.save
     end
