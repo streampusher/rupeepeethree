@@ -1,3 +1,4 @@
+before_install: sudo apt-get install libtag1-dev
 language: ruby
 notifications:
   email:
