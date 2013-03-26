@@ -7,7 +7,7 @@ describe Rupeepeethree do
   end
   before :each do
     # clear tags
-    line = Cocaine::CommandLine.new(@rp3, "-t '' -a '' -Y '' -A '' :mp3")
+    line = Cocaine::CommandLine.new(@rp3, "-c :mp3")
     line.run(mp3: "spec/fixtures/test.mp3")
   end
   it "sets a title tag" do

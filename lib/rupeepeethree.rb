@@ -19,6 +19,7 @@ You thought your mp3s were cool. Turns out you were wrong. Your mp3s have no tag
       opt :year, "track year", type: String, short: 'Y'
       opt :album, "album title", type: String, short: 'A'
       opt :picture, "artwork", type: String, short: 'p'
+      opt :clear, "clear all tags!"
     end
 
     opts = Trollop::with_standard_exception_handling p do
@@ -30,7 +31,11 @@ You thought your mp3s were cool. Turns out you were wrong. Your mp3s have no tag
     if mp3.nil?
       abort("no mp3 specified...")
     end
-    Tagger.tag(mp3,opts)
-    puts Tagger.print_tags(mp3)
+    if opts[:clear]
+      Tagger.clear(mp3)
+    else
+      Tagger.tag(mp3,opts)
+      puts Tagger.print_tags(mp3)
+    end
   end
 end
