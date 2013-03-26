@@ -4,6 +4,8 @@ http://github.com/datafruits/rupeepeethree
 
 ## DESCRIPTION:
 
+[![Build Status](https://secure.travis-ci.org/datafruits/rupeepeethree.png?branch=master)](http://travis-ci.org/datafruits/rupeepeethree)
+
 tag your mp3 files. a command line wrapper around taglib-ruby.
 
 ## FEATURES/PROBLEMS:
