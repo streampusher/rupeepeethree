@@ -1,9 +1,12 @@
 require './lib/rupeepeethree/tagger'
 
 describe Tagger do
+  let(:mp3) { 'spec/fixtures/test.mp3' }
+  before :each do
+    Tagger.clear(mp3)
+  end
   it "creates a new apic frame if none exist"
   it "clears the tags"  do
-    mp3 = './spec/fixtures/test.mp3'
     tags = {title: "foodfight",
             artist: "ninjaturtle",
             album: "purplerain",
