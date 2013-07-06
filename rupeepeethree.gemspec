@@ -25,6 +25,10 @@ Gem::Specification.new do |s|
   s.rubygems_version = "1.8.25"
   s.summary = "tag your mp3 files"
 
+  s.add_dependency 'taglib-ruby'
+  s.add_dependency 'trollop'
+  s.add_dependency 'mime-types'
+
   if s.respond_to? :specification_version then
     s.specification_version = 3
 
