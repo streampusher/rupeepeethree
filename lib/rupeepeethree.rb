@@ -17,6 +17,7 @@ You thought your mp3s were cool. Turns out you were wrong. Your mp3s have no tag
       opt :title, "title", type: String, short: 't'
       opt :artist, "artist", type: String, short: 'a'
       opt :year, "track year", type: String, short: 'Y'
+      opt :track, "track number", type: String, short: 'n'
       opt :album, "album title", type: String, short: 'A'
       opt :picture, "artwork", type: String, short: 'p'
       opt :clear, "clear all tags!"

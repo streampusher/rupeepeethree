@@ -36,4 +36,9 @@ describe Rupeepeethree do
     result.should match(/image\/jpeg/) 
     result.should match(/59562 bytes/)
   end
+  it "sets track number" do
+    line = Cocaine::CommandLine.new(@rp3, "-n :num :mp3")
+    result = line.run(num: "3", mp3: "spec/fixtures/test.mp3")
+    result.should match(/3/) 
+  end
 end

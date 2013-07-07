@@ -17,6 +17,9 @@ class Tagger
       if tags[:year]
         t.year = tags[:year].to_i
       end
+      if tags[:track]
+        t.track = tags[:track].to_i
+      end
       if tags[:picture]
         image_file = File.expand_path(tags[:picture])
         # delete old frame if it exists
@@ -49,6 +52,7 @@ class Tagger
       result << "title: #{t.title}\n"
       result << "artist: #{t.artist}\n"
       result << "album: #{t.album}\n"
+      result << "track number: #{t.track}\n"
       result << "year: #{t.year}\n"
 
       t.frame_list('APIC').each do |cover|
