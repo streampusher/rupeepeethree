@@ -58,6 +58,14 @@ class Tagger
       t.frame_list('APIC').each do |cover|
         result << "image: [#{cover.mime_type}] [#{cover.picture.length} bytes]\n"
       end
+
+      prop = f.audio_properties
+      if prop
+        result << "Bitrate: #{prop.bitrate}\n"
+        result << "Channels: #{prop.channels}\n"
+        result << "Sample Rate: #{prop.sample_rate}\n"
+        result << "Length: #{sprintf("%.2f", prop.length/60.0)}\n"
+      end
     end
     return result
   end

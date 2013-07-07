@@ -23,22 +23,22 @@ describe Rupeepeethree do
   it "sets an album tag" do
     line = Cocaine::CommandLine.new(@rp3, "-A :album :mp3")
     result = line.run(album: "purplerain", mp3: "spec/fixtures/test.mp3")
-    result.should match(/purplerain/) 
+    result.should match(/purplerain/)
   end
   it "sets a year tag" do
     line = Cocaine::CommandLine.new(@rp3, "-Y :year :mp3")
     result = line.run(year: "1987", mp3: "spec/fixtures/test.mp3")
-    result.should match(/1987/) 
+    result.should match(/1987/)
   end
   it "sets album art tag" do
     line = Cocaine::CommandLine.new(@rp3, "-p :pic :mp3")
     result = line.run(pic: "spec/fixtures/cover_art.jpg", mp3: "spec/fixtures/test.mp3")
-    result.should match(/image\/jpeg/) 
+    result.should match(/image\/jpeg/)
     result.should match(/59562 bytes/)
   end
   it "sets track number" do
     line = Cocaine::CommandLine.new(@rp3, "-n :num :mp3")
     result = line.run(num: "3", mp3: "spec/fixtures/test.mp3")
-    result.should match(/3/) 
+    result.should match(/track number: 3/)
   end
 end
