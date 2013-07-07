@@ -27,15 +27,17 @@ You thought your mp3s were cool. Turns out you were wrong. Your mp3s have no tag
       p.parse ARGV
     end
 
-    mp3 = ARGV[0]
-    if mp3.nil?
+    mp3s = ARGV
+    if mp3s.empty?
       abort("no mp3 specified...")
     end
-    if opts[:clear]
-      Tagger.clear(mp3)
-    else
-      Tagger.tag(mp3,opts)
-      puts Tagger.print_tags(mp3)
+    mp3s.each do |mp3|
+      if opts[:clear]
+        Tagger.clear(mp3)
+      else
+        Tagger.tag(mp3,opts)
+        puts Tagger.print_tags(mp3)
+      end
     end
   end
 end
