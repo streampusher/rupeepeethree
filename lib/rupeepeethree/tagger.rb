@@ -72,6 +72,6 @@ class Tagger
 
   private
   def self.mime_type(file)
-    MIME::Types.type_for(file).to_s
+    MIME::Types.type_for(file).first.simplified.to_s
   end
 end

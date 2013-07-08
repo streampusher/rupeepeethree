@@ -7,7 +7,7 @@ describe Tagger do
   end
   it "edits the existing cover art frame instead of creating a new one" do
     tags = {picture: "spec/fixtures/cover_art.jpg"}
-    image_string = /image: \[\[image\/jpeg\]\] \[59562 bytes\]\n/
+    image_string = /image: \[image\/jpeg\] \[59562 bytes\]\n/
     Tagger.tag(mp3, tags)
     result = Tagger.print_tags(mp3)
     result.should match(image_string)
