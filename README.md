@@ -6,7 +6,13 @@ http://github.com/datafruits/rupeepeethree
 
 [![Build Status](https://secure.travis-ci.org/datafruits/rupeepeethree.png?branch=master)](http://travis-ci.org/datafruits/rupeepeethree)
 
-tag your mp3 files. a command line wrapper around taglib-ruby.
+░█▀▄░█▀█░▀▀█
+░█▀▄░█▀▀░░▀▄
+░▀░▀░▀░░░▀▀░
+┣¨ｷ┣¨ｷ
+You thought your mp3s were cool. Turns out you were wrong. Your mp3s have no tags. You must tag them!
+
+a simple library and command line utility wrapper around ruby-taglib
 
 ## FEATURES/PROBLEMS:
 
