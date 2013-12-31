@@ -2,4 +2,4 @@
 
 require 'rupeepeethree'
 
-Rupeepeethree.run ARGV
+Rupeepeethree::Cli.run ARGV

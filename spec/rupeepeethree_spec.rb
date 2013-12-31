@@ -1,7 +1,7 @@
 require "rupeepeethree"
 require "cocaine"
 
-describe Rupeepeethree do
+describe 'integration test' do
   before :all do
     @rp3 = "ruby -Ilib bin/rp3"
   end
