@@ -16,6 +16,19 @@ describe Rupeepeethree::Tagger do
     result = Rupeepeethree::Tagger.print_tags(mp3)
     result.should_not match(/#{image_string}{2}/)
   end
+  it "gets a hash of the tags" do
+    tags = {title: "foodfight",
+            artist: "ninjaturtle",
+            album: "purplerain",
+            year: "1987",
+            picture: "spec/fixtures/cover_art.jpg"}
+    Rupeepeethree::Tagger.tag(mp3, tags)
+    t = Rupeepeethree::Tagger.tags(mp3)
+    expect(t[:title]).to eq("foodfight")
+    expect(t[:artist]).to eq("ninjaturtle")
+    expect(t[:album]).to eq("purplerain")
+    expect(t[:year]).to eq(1987)
+  end
   it "clears the tags"  do
     tags = {title: "foodfight",
             artist: "ninjaturtle",

@@ -38,6 +38,20 @@ module Rupeepeethree
       end
     end
 
+    def self.tags(mp3)
+      hash = {}
+      TagLib::MPEG::File.open(mp3) do |f|
+        t = f.id3v2_tag
+
+        hash[:title] =  t.title
+        hash[:artist] = t.artist
+        hash[:album] = t.album
+        hash[:track_number] = t.track
+        hash[:year] = t.year
+      end
+      hash
+    end
+
     # clear all tags
     def self.clear(mp3)
       TagLib::MPEG::File.open(mp3) do |f|
