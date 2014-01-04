@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/datafruits/fruity_formatter.git
+  revision: 938e293f258af2f656680137cf5d094b24320408
+  specs:
+    fruity_formatter (0.0.1)
+      rspec
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -29,6 +36,7 @@ PLATFORMS
 
 DEPENDENCIES
   cocaine
+  fruity_formatter!
   mime-types
   rake
   rspec
