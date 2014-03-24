@@ -4,7 +4,7 @@ http://github.com/datafruits/rupeepeethree
 
 ## DESCRIPTION:
 
-[![Gem Version](http://img.shields.io/gem/v/rupeepeethree.svg)]
+[![Gem Version](http://img.shields.io/gem/v/rupeepeethree.svg)](https://rubygems.org/gems/rupeepeethree)
 [![Build Status](https://secure.travis-ci.org/datafruits/rupeepeethree.png?branch=master)](http://travis-ci.org/datafruits/rupeepeethree)
 
 ░█▀▄░█▀█░▀▀█
