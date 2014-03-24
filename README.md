@@ -4,6 +4,7 @@ http://github.com/datafruits/rupeepeethree
 
 ## DESCRIPTION:
 
+[![Gem Version](http://img.shields.io/gem/v/rupeepeethree.svg)]
 [![Build Status](https://secure.travis-ci.org/datafruits/rupeepeethree.png?branch=master)](http://travis-ci.org/datafruits/rupeepeethree)
 
 ░█▀▄░█▀█░▀▀█
@@ -19,7 +20,7 @@ a simple library and command line utility wrapper around ruby-taglib
 * a dumb name
 * probably works
 * has tests
-* easier to change the album art than eyeD3 
+* easier to change the album art than eyeD3
 
 ## SYNOPSIS:
 
