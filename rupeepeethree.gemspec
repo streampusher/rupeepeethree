@@ -13,6 +13,7 @@ Gem::Specification.new do |s|
   s.date = "2013-03-14"
   s.description = "tag your mp3 files. a command line wrapper around taglib-ruby."
   s.email = ["mcfiredrill@gmail.com"]
+  s.bindir = 'bin'
   s.executables = ["rp3"]
   s.extra_rdoc_files = ["History.txt", "Manifest.txt"]
   s.files         = `git ls-files`.split("\n")
