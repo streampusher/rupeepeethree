@@ -6,6 +6,7 @@ http://github.com/datafruits/rupeepeethree
 
 [![Gem Version](http://img.shields.io/gem/v/rupeepeethree.svg)](https://rubygems.org/gems/rupeepeethree)
 [![Build Status](https://secure.travis-ci.org/datafruits/rupeepeethree.png?branch=master)](http://travis-ci.org/datafruits/rupeepeethree)
+[![Code Climate](https://img.shields.io/codeclimate/github/datafruits/rupeepeethree.svg)](https://codeclimate.com/github/datafruits/rupeepeethree)
 
 ░█▀▄░█▀█░▀▀█
 ░█▀▄░█▀▀░░▀▄
