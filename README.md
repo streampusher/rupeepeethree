@@ -2,16 +2,13 @@
 
 http://github.com/datafruits/rupeepeethree
 
-## DESCRIPTION:
-
 [![Gem Version](http://img.shields.io/gem/v/rupeepeethree.svg)](https://rubygems.org/gems/rupeepeethree)
-[![Build Status](https://secure.travis-ci.org/datafruits/rupeepeethree.png?branch=master)](http://travis-ci.org/datafruits/rupeepeethree)
+[![Build Status](https://img.shields.io/travis/datafruits/rupeepeethree.svg)](http://travis-ci.org/datafruits/rupeepeethree)
 [![Code Climate](https://img.shields.io/codeclimate/github/datafruits/rupeepeethree.svg)](https://codeclimate.com/github/datafruits/rupeepeethree)
 
-░█▀▄░█▀█░▀▀█
-░█▀▄░█▀▀░░▀▄
-░▀░▀░▀░░░▀▀░
-┣¨ｷ┣¨ｷ
+
+## DESCRIPTION:
+
 You thought your mp3s were cool. Turns out you were wrong. Your mp3s have no tags. You must tag them!
 
 a simple library and command line utility wrapper around ruby-taglib
