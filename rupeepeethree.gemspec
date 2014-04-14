@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Tony Miller"]
   s.date = "2013-03-14"
-  s.description = "tag your mp3 files. a command line wrapper around taglib-ruby."
+  s.description = "tag your mp3 files. a command line wrapper and library around taglib-ruby."
   s.email = ["mcfiredrill@gmail.com"]
   s.bindir = 'bin'
   s.executables = ["rp3"]
@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'taglib-ruby', '~> 0.6.0'
   s.add_dependency 'trollop', '~> 2.0'
-  s.add_dependency 'mime-types', '~> 2.0'
+  s.add_dependency 'mime-types', '>= 1.16'
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
