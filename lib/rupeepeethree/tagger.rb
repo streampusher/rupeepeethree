@@ -3,7 +3,9 @@ require 'mime/types'
 
 module Rupeepeethree
   class Tagger
+    class FileNotFound < StandardError; end
     def self.tag(mp3,tags)
+      raise FileNotFound if !File.exist? mp3
       TagLib::MPEG::File.open(mp3) do |f|
         t = f.id3v2_tag || TagLib::ID3v2::Tag.new
         if tags[:title]
@@ -39,6 +41,7 @@ module Rupeepeethree
     end
 
     def self.tags(mp3)
+      raise FileNotFound if !File.exist? mp3
       hash = {}
       TagLib::MPEG::File.open(mp3) do |f|
         t = f.id3v2_tag
@@ -54,12 +57,14 @@ module Rupeepeethree
 
     # clear all tags
     def self.clear(mp3)
+      raise FileNotFound if !File.exist? mp3
       TagLib::MPEG::File.open(mp3) do |f|
         f.strip
       end
     end
 
     def self.print_tags(mp3)
+      raise FileNotFound if !File.exist? mp3
       result = ""
       TagLib::MPEG::File.open(mp3) do |f|
         t = f.id3v2_tag
