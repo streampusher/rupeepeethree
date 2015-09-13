@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
   s.rubygems_version = "1.8.25"
   s.summary = "tag your mp3 files"
 
-  s.add_dependency 'taglib-ruby', '~> 0.6.0'
+  s.add_dependency 'taglib-ruby', '~> 0.7.0'
   s.add_dependency 'trollop', '~> 2.0'
   s.add_dependency 'mime-types', '>= 1.16'
 
