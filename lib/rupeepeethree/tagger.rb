@@ -51,6 +51,8 @@ module Rupeepeethree
         hash[:album] = t.album
         hash[:track_number] = t.track
         hash[:year] = t.year
+        properties = f.audio_properties
+        hash[:length] = properties.length
       end
       hash
     end

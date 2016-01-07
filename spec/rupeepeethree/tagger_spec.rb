@@ -45,6 +45,11 @@ describe Rupeepeethree::Tagger do
     result.should_not match(/image:/)
   end
 
+  it "returns track length" do
+    tags = Rupeepeethree::Tagger.tags(mp3)
+    expect(tags[:length]).to eq 2
+  end
+
   it 'blows up if the mp3 file is not found' do
     expect do
       Rupeepeethree::Tagger.tags('not a file')
