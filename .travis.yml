@@ -1,10 +1,13 @@
-before_install: sudo apt-get install libtag1-dev
+addons:
+  apt:
+    packages:
+    - libtag1-dev
+sudo: false
 language: ruby
 notifications:
   email:
   - mcfiredrill@gmail.com
 rvm:
-- 1.9.2
 - 1.9.3
-- 2.0.0
+- 2.3.0
 script: bundle exec rspec
