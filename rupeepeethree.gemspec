@@ -30,6 +30,11 @@ Gem::Specification.new do |s|
   s.add_dependency 'trollop', '~> 2.0'
   s.add_dependency 'mime-types', '>= 1.16'
 
+  s.add_development_dependency "bundler", "~> 1.3"
+  s.add_development_dependency "rake"
+  s.add_development_dependency "rspec", "~> 3.0"
+  s.add_development_dependency "fruity_formatter"
+
   if s.respond_to? :specification_version then
     s.specification_version = 3
 
