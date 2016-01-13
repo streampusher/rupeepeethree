@@ -34,6 +34,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rake"
   s.add_development_dependency "rspec", "~> 3.0"
   s.add_development_dependency "fruity_formatter"
+  s.add_development_dependency "cocaine"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
