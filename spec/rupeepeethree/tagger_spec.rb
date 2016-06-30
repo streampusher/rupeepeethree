@@ -10,11 +10,11 @@ describe Rupeepeethree::Tagger do
     image_string = /image: \[image\/jpeg\] \[59562 bytes\]\n/
     Rupeepeethree::Tagger.tag(mp3, tags)
     result = Rupeepeethree::Tagger.print_tags(mp3)
-    result.should match(image_string)
+    expect(result).to match(image_string)
 
     Rupeepeethree::Tagger.tag(mp3, tags)
     result = Rupeepeethree::Tagger.print_tags(mp3)
-    result.should_not match(/#{image_string}{2}/)
+    expect(result).not_to match(/#{image_string}{2}/)
   end
   it "gets a hash of the tags" do
     tags = {title: "foodfight",
@@ -38,11 +38,11 @@ describe Rupeepeethree::Tagger do
     Rupeepeethree::Tagger.tag(mp3, tags)
     Rupeepeethree::Tagger.clear(mp3)
     result = Rupeepeethree::Tagger.print_tags(mp3)
-    result.should match(/title: \n/)
-    result.should match(/artist: \n/)
-    result.should match(/album: \n/)
-    result.should match(/year: 0\n/)
-    result.should_not match(/image:/)
+    expect(result).to match(/title: \n/)
+    expect(result).to match(/artist: \n/)
+    expect(result).to match(/album: \n/)
+    expect(result).to match(/year: 0\n/)
+    expect(result).not_to match(/image:/)
   end
 
   it "returns track length" do
