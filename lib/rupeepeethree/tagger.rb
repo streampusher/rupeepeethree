@@ -53,6 +53,10 @@ module Rupeepeethree
         hash[:year] = t.year
         properties = f.audio_properties
         hash[:length] = properties.length
+        picture = t.frame_list("APIC").first
+        if picture
+          hash[:picture] = { mime_type: picture.mime_type, data: picture.picture }
+        end
       end
       hash
     end

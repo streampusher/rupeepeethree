@@ -28,6 +28,7 @@ describe Rupeepeethree::Tagger do
     expect(t[:artist]).to eq("ninjaturtle")
     expect(t[:album]).to eq("purplerain")
     expect(t[:year]).to eq(1987)
+    expect(t[:picture][:mime_type]).to eq "image/jpeg"
   end
   it "clears the tags"  do
     tags = {title: "foodfight",
