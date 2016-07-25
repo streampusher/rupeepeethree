@@ -98,7 +98,10 @@ module Rupeepeethree
 
     private
     def self.mime_type(file)
-      MIME::Types.type_for(file).first.simplified.to_s
+      mime_type = MIME::Types.type_for(file).first
+      if mime_type
+        mime_type.simplified.to_s
+      end
     end
   end
 end
