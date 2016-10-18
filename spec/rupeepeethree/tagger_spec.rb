@@ -30,6 +30,23 @@ describe Rupeepeethree::Tagger do
     expect(t[:year]).to eq(1987)
     expect(t[:picture][:mime_type]).to eq "image/jpeg"
   end
+
+  it "sets field to blank" do
+    tags = {title: "foodfight",
+            artist: "ninjaturtle",
+            album: "purplerain",
+            year: "1987",
+            picture: "spec/fixtures/cover_art.jpg"}
+    Rupeepeethree::Tagger.tag(mp3, tags)
+    tags = {title: "",
+            artist: "ninjaturtle",
+            album: "purplerain",
+            year: "1987",
+            picture: "spec/fixtures/cover_art.jpg"}
+    Rupeepeethree::Tagger.tag(mp3, tags)
+    expect(Rupeepeethree::Tagger.tags(mp3)[:title]).to eq ""
+  end
+
   it "clears the tags"  do
     tags = {title: "foodfight",
             artist: "ninjaturtle",

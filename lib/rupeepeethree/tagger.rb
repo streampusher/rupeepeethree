@@ -36,7 +36,7 @@ module Rupeepeethree
           cover.picture = File.open(image_file,"rb"){|f|f.read}
           t.add_frame(cover)
         end
-        f.save
+        f.save(TagLib::MPEG::File::ID3v2)
       end
     end
 
