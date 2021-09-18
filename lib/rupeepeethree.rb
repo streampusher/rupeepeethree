@@ -1,12 +1,12 @@
 # encoding: utf-8
 require 'rupeepeethree/tagger'
 require 'rupeepeethree/version'
-require 'trollop'
+require 'optimist'
 
 module Rupeepeethree
   class Cli
     def self.run(args)
-      p = Trollop::Parser.new do
+      p = Optimist::Parser.new do
         version "RP3 version #{VERSION} by Tony Miller"
         banner <<-EOS
   ░█▀▄░█▀█░▀▀█
@@ -24,8 +24,8 @@ module Rupeepeethree
         opt :clear, "clear all tags!"
       end
 
-      opts = Trollop::with_standard_exception_handling p do
-        raise Trollop::HelpNeeded if ARGV.empty? # show help screen
+      opts = Optimist::with_standard_exception_handling p do
+        raise Optimist::HelpNeeded if ARGV.empty? # show help screen
         p.parse ARGV
       end
 

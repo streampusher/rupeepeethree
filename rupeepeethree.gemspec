@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
   s.summary = "tag your mp3 files"
 
   s.add_dependency 'taglib-ruby', '~> 0.7.0'
-  s.add_dependency 'trollop', '~> 2.0'
+  s.add_dependency 'optimist'
   s.add_dependency 'mime-types', '>= 1.16'
 
   s.add_development_dependency "bundler"
