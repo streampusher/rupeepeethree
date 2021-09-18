@@ -22,7 +22,6 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.rdoc_options = ["--main", "README.md"]
   s.require_paths = ["lib"]
-  s.rubyforge_project = "rupeepeethree"
   s.rubygems_version = "1.8.25"
   s.summary = "tag your mp3 files"
 
