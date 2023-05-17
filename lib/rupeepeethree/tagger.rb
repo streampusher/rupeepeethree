@@ -52,7 +52,7 @@ module Rupeepeethree
         hash[:track_number] = t.track
         hash[:year] = t.year
         properties = f.audio_properties
-        hash[:length] = properties.length
+        hash[:length] = properties.length_in_seconds
         picture = t.frame_list("APIC").first
         if picture
           hash[:picture] = { mime_type: picture.mime_type, data: picture.picture }
@@ -90,7 +90,7 @@ module Rupeepeethree
           result << "Bitrate: #{prop.bitrate}\n"
           result << "Channels: #{prop.channels}\n"
           result << "Sample Rate: #{prop.sample_rate}\n"
-          result << "Length: #{sprintf("%.2f", prop.length/60.0)}\n"
+          result << "Length: #{sprintf("%.2f", prop.length_in_seconds/60.0)}\n"
         end
       end
       return result
